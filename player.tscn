@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn8if1wl0xj52"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_61rui"]
+[ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="2_sm10w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lqn0k"]
+radius = 61.0082
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_61rui")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, -6)
+shape = SubResource("CircleShape2D_lqn0k")
+
+[node name="HappyBoo" parent="CollisionShape2D" instance=ExtResource("2_sm10w")]
+unique_name_in_owner = true
+position = Vector2(3, 37)
