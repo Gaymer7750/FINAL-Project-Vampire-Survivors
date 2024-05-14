@@ -9,9 +9,12 @@ radius = 32.1403
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_61rui")
 
+[node name="HappyBoo" parent="." instance=ExtResource("2_sm10w")]
+unique_name_in_owner = true
+position = Vector2(1, 0)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_lqn0k")
 
-[node name="HappyBoo" parent="CollisionShape2D" instance=ExtResource("2_sm10w")]
-unique_name_in_owner = true
+[node name="Camera2D" type="Camera2D" parent="."]
