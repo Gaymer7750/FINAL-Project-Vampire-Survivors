@@ -11,21 +11,26 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_tgch6")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1csun")
+
 [node name="WeaponPivot" type="Marker2D" parent="."]
 position = Vector2(1.52588e-05, 1)
 rotation = -0.0052557
-scale = Vector2(1, 1)
 
 [node name="Pistol2" type="Sprite2D" parent="WeaponPivot"]
 position = Vector2(87.0934, -17.5425)
 rotation = 0.0052557
-scale = Vector2(1, 1)
 texture = ExtResource("1_5rdxg")
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/Pistol2"]
+unique_name_in_owner = true
 position = Vector2(25, -11)
 rotation = -0.0052557
 scale = Vector2(0.114286, 0.12)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_1csun")
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
