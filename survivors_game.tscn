@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmqpsb6yokukm"]
+[gd_scene load_steps=7 format=3 uid="uid://cmqpsb6yokukm"]
 
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_ss2b2"]
 [ext_resource type="PackedScene" uid="uid://bn8if1wl0xj52" path="res://player.tscn" id="1_ygyey"]
 [ext_resource type="PackedScene" uid="uid://j85stxvqfg4i" path="res://pine_tree.tscn" id="2_0ejtd"]
+[ext_resource type="AudioStream" uid="uid://jgcurdjfhlcr" path="res://Music.mp3" id="4_e7bb7"]
+[ext_resource type="AudioStream" uid="uid://bvu57xl5oo0ij" path="res://DeathSound.mp3" id="5_lquiv"]
 
 [sub_resource type="Curve2D" id="Curve2D_ivigb"]
 _data = {
@@ -94,6 +96,13 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 150
 text = "Game Over!!! 😿
 			(☝ ՞ਊ ՞)☝"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_e7bb7")
+autoplay = true
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_lquiv")
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
