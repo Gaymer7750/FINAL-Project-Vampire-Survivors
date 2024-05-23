@@ -4,10 +4,10 @@ signal health_depleted
 var health := 100.0
 @onready var progress_bar = %ProgressBar
 
-var regen_amount: float = 3.0
+var regen_amount: float = 5.0
 
 func _ready():
-	regen_amount = 3
+	regen_amount = 5
 
 func regen(delta):
 		progress_bar.value += delta * regen_amount
