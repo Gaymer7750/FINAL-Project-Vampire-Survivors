@@ -40,13 +40,17 @@ shape = SubResource("CircleShape2D_lqn0k")
 [node name="Gun" parent="." instance=ExtResource("3_7jpug")]
 position = Vector2(0, -39)
 
+[node name="Gun4" parent="." instance=ExtResource("3_7jpug")]
+position = Vector2(-5, -31)
+rotation = -2.79154
+
 [node name="HurtBox" type="Area2D" parent="."]
 unique_name_in_owner = true
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(2, -11)
+position = Vector2(1, -4)
 shape = SubResource("CircleShape2D_prr2j")
 debug_color = Color(0.996078, 0, 0.180392, 0.419608)
 
