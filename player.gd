@@ -22,7 +22,6 @@ func _physics_process(delta):
 		%HappyBoo.play_walk_animation()
 	else:
 		%HappyBoo.play_idle_animation()
-		
 
 	const DAMAGE_RATE = 10.0
 
