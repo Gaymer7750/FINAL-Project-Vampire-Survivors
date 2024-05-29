@@ -25,6 +25,8 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+platform_floor_layers = 0
 script = ExtResource("1_61rui")
 
 [node name="HappyBoo" parent="." instance=ExtResource("2_sm10w")]
