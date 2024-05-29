@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpnt868cqrwfn"]
+[gd_scene load_steps=4 format=3 uid="uid://dphdabfblgkey"]
 
-[ext_resource type="Script" path="res://bullet.gd" id="1_u6efb"]
-[ext_resource type="Texture2D" uid="uid://buj2fh713nm83" path="res://Screenshot_2024-05-29_at_11.29.19_AM-removebg-preview.png" id="2_b2585"]
+[ext_resource type="Script" path="res://bullet.gd" id="1_hu5q4"]
+[ext_resource type="Texture2D" uid="uid://cqiahpnjcc1mc" path="res://Screenshot_2024-05-29_at_11.39.35_AM-removebg-preview.png" id="2_l4qwg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fahvy"]
 radius = 16.0312
@@ -12,13 +12,13 @@ position = Vector2(-9, 0)
 rotation = 0.0267885
 collision_layer = 0
 collision_mask = 3
-script = ExtResource("1_u6efb")
+script = ExtResource("1_hu5q4")
 
 [node name="Projectile" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
 rotation = 3.14159
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_b2585")
+texture = ExtResource("2_l4qwg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(9, 1)
