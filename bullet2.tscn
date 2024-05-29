@@ -15,8 +15,8 @@ collision_mask = 3
 script = ExtResource("1_hu5q4")
 
 [node name="Projectile" type="Sprite2D" parent="."]
-position = Vector2(-1, 0)
-rotation = 3.14159
+position = Vector2(8.02392, 0.785359)
+rotation = 3.11613
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_l4qwg")
 
