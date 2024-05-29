@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_ss2b2"]
 [ext_resource type="PackedScene" uid="uid://bn8if1wl0xj52" path="res://player.tscn" id="1_ygyey"]
-[ext_resource type="PackedScene" uid="uid://j85stxvqfg4i" path="res://pine_tree.tscn" id="2_0ejtd"]
+[ext_resource type="PackedScene" uid="uid://cldvis7re3ld5" path="res://Background.tscn" id="2_lksjr"]
 [ext_resource type="AudioStream" uid="uid://jgcurdjfhlcr" path="res://Music.mp3" id="4_e7bb7"]
 [ext_resource type="AudioStream" uid="uid://bvu57xl5oo0ij" path="res://DeathSound.mp3" id="5_lquiv"]
 
@@ -16,15 +16,12 @@ point_count = 6
 y_sort_enabled = true
 script = ExtResource("1_ss2b2")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -30
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_right = 1924.0
-offset_bottom = 1075.0
+[node name="TileMap" parent="." instance=ExtResource("2_lksjr")]
+position = Vector2(-15, 88)
 
 [node name="Player" parent="." instance=ExtResource("1_ygyey")]
-position = Vector2(903, 370)
+use_parent_material = true
+position = Vector2(4898, 5688)
 
 [node name="Path2D" type="Path2D" parent="Player"]
 position = Vector2(-903, -370)
@@ -33,36 +30,6 @@ curve = SubResource("Curve2D_ivigb")
 [node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
 unique_name_in_owner = true
 position = Vector2(-86, -134)
-
-[node name="PineTree" parent="." instance=ExtResource("2_0ejtd")]
-position = Vector2(194, 172)
-
-[node name="PineTree2" parent="." instance=ExtResource("2_0ejtd")]
-position = Vector2(533, 170)
-
-[node name="PineTree3" parent="." instance=ExtResource("2_0ejtd")]
-position = Vector2(978, 159)
-
-[node name="PineTree4" parent="." instance=ExtResource("2_0ejtd")]
-position = Vector2(1435, 167)
-
-[node name="PineTree5" parent="." instance=ExtResource("2_0ejtd")]
-position = Vector2(365, 421)
-
-[node name="PineTree6" parent="." instance=ExtResource("2_0ejtd")]
-position = Vector2(449, 737)
-
-[node name="PineTree7" parent="." instance=ExtResource("2_0ejtd")]
-position = Vector2(748, 400)
-
-[node name="PineTree8" parent="." instance=ExtResource("2_0ejtd")]
-position = Vector2(1033, 640)
-
-[node name="PineTree9" parent="." instance=ExtResource("2_0ejtd")]
-position = Vector2(1498, 535)
-
-[node name="PineTree10" parent="." instance=ExtResource("2_0ejtd")]
-position = Vector2(1421, 864)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
@@ -103,6 +70,9 @@ autoplay = true
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_lquiv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
