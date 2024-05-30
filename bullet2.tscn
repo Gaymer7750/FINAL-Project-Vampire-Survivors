@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://dphdabfblgkey"]
 
 [ext_resource type="Script" path="res://bullet.gd" id="1_hu5q4"]
-[ext_resource type="Texture2D" uid="uid://cqiahpnjcc1mc" path="res://Screenshot_2024-05-29_at_11.39.35_AM-removebg-preview.png" id="2_l4qwg"]
+[ext_resource type="Texture2D" uid="uid://dw8t45p4x2n73" path="res://hollow purple.png" id="2_r628c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fahvy"]
-radius = 16.0312
+radius = 28.0852
 
 [node name="Bullet" type="Area2D"]
 top_level = true
@@ -18,10 +18,10 @@ script = ExtResource("1_hu5q4")
 position = Vector2(8.02392, 0.785359)
 rotation = 3.11613
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_l4qwg")
+texture = ExtResource("2_r628c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(9, 1)
+position = Vector2(6.99749, -0.187497)
 shape = SubResource("CircleShape2D_fahvy")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
