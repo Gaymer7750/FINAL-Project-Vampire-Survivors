@@ -1,12 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://pbmyh1qru7p"]
+[gd_scene load_steps=10 format=3 uid="uid://pbmyh1qru7p"]
 
 [ext_resource type="Script" path="res://characters/happy_boo/happy_boo.gd" id="1_kg7lb"]
 [ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://characters/ground_shadow.png" id="2_62bos"]
-[ext_resource type="Texture2D" uid="uid://ng8e5ot0dtpd" path="res://characters/happy_boo/square_foot.png" id="3_186qq"]
-[ext_resource type="Texture2D" uid="uid://dhapxq8y8ow57" path="res://characters/happy_boo/square_lower_leg.png" id="4_plnsd"]
 [ext_resource type="Texture2D" uid="uid://qmqpm6asge1i" path="res://characters/happy_boo/square_upper_leg.png" id="5_q2t1e"]
 [ext_resource type="Texture2D" uid="uid://cksiu5gst6fmp" path="res://characters/happy_boo/square_body.png" id="6_w3ck4"]
-[ext_resource type="Texture2D" uid="uid://cvs0lh814pk7h" path="res://characters/happy_boo/square_face.png" id="7_h5h8s"]
+[ext_resource type="Texture2D" uid="uid://d02l2rf755f4v" path="res://gojoguy2.png" id="7_572o0"]
 
 [sub_resource type="Animation" id="Animation_hed62"]
 length = 0.001
@@ -608,35 +606,12 @@ scale = Vector2(0.997829, 0.999794)
 texture = ExtResource("5_q2t1e")
 offset = Vector2(0, 6)
 
-[node name="SquareLowerLegL" type="Sprite2D" parent="Colorizer/SquareUpperLegL"]
-position = Vector2(0, 14)
-texture = ExtResource("4_plnsd")
-offset = Vector2(0, 6)
-
-[node name="SquareFootL" type="Sprite2D" parent="Colorizer/SquareUpperLegL/SquareLowerLegL"]
-position = Vector2(0, 12)
-rotation = -3.40666
-scale = Vector2(1.01116, 1)
-texture = ExtResource("3_186qq")
-offset = Vector2(-4, 0)
-
 [node name="SquareUpperLegR" type="Sprite2D" parent="Colorizer"]
 position = Vector2(9.20459, -29.9444)
 rotation = -0.213676
 scale = Vector2(0.999794, 0.999794)
 texture = ExtResource("5_q2t1e")
 offset = Vector2(0, 6)
-
-[node name="SquareLowerLegR" type="Sprite2D" parent="Colorizer/SquareUpperLegR"]
-position = Vector2(-4.76837e-07, 14)
-texture = ExtResource("4_plnsd")
-offset = Vector2(0, 6)
-
-[node name="SquareFootR" type="Sprite2D" parent="Colorizer/SquareUpperLegR/SquareLowerLegR"]
-position = Vector2(0, 12)
-rotation = -2.92296
-texture = ExtResource("3_186qq")
-offset = Vector2(-4, 0)
 
 [node name="SquareBody" type="Sprite2D" parent="Colorizer"]
 position = Vector2(-1.73067, -36.6061)
@@ -647,5 +622,5 @@ offset = Vector2(0, -23)
 
 [node name="SquareFace" type="Sprite2D" parent="Colorizer/SquareBody"]
 position = Vector2(0, -17)
-texture = ExtResource("7_h5h8s")
-metadata/_edit_lock_ = true
+scale = Vector2(0.395794, 0.387134)
+texture = ExtResource("7_572o0")
