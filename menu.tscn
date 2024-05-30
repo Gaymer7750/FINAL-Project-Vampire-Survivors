@@ -63,7 +63,7 @@ offset_right = -49.0
 offset_bottom = 302.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 100
-text = "Welcome to our final game!
+text = "Welcome to Sorcery Survivors!
 (o・┏ω┓・o)"
 
 [connection signal="pressed" from="ColorRect/StartButton" to="." method="_on_start_button_pressed"]
